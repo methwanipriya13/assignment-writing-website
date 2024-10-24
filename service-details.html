@@ -377,30 +377,33 @@
 
 <!-- Add this JavaScript before the closing body tag -->
 <script>
-  const serviceLinks = document.querySelectorAll('.services-list a');
-  const serviceContents = document.querySelectorAll('.service-content');
+    function showService(serviceId) {
+        // Hide all service sections
+        const sections = document.querySelectorAll('.service-section');
+        sections.forEach((section) => {
+            section.style.display = 'none';
+        });
 
-  serviceLinks.forEach((link, index) => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
+        // Show the selected service section
+        const activeSection = document.getElementById(serviceId);
+        if (activeSection) {
+            activeSection.style.display = 'block';
+        }
 
-      // Remove 'active' class from all links
-      serviceLinks.forEach(link => link.classList.remove('active'));
+        // Remove active class from all links
+        const links = document.querySelectorAll('.services-list a');
+        links.forEach((link) => {
+            link.classList.remove('active');
+        });
 
-      // Add 'active' class to the clicked link
-      link.classList.add('active');
-
-      // Hide all service content sections
-      serviceContents.forEach(content => content.style.display = 'none');
-
-      // Display the selected service content
-      serviceContents[index].style.display = 'block';
-    });
-  });
-
-  // Display the first service by default
-  serviceContents[0].style.display = 'block';
+        // Add active class to the clicked link
+        const clickedLink = document.querySelector(`.services-list a[onclick="showService('${serviceId}')"]`);
+        if (clickedLink) {
+            clickedLink.classList.add('active');
+        }
+    }
 </script>
+
 
 </body>
 </html>
