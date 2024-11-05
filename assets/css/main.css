@@ -1068,20 +1068,29 @@ section,
   background: var(--accent-color);
   border: 2px solid var(--accent-color);
 }
-/* Ensure Call to Action centers everything */
+/* Center align entire call-to-action section content */
 .call-to-action .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    min-height: 100%; /* Ensures full height */
+    min-height: 300px; /* Ensures the height is large enough */
 }
 
-.call-to-action .qr-code {
-    margin-top: 20px; /* Space above QR code */
-    display: inline-block;
+/* QR Code specific styling */
+.qr-code-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
 }
+
+.qr-code {
+    width: 20%; /* Adjust as needed */
+    height: auto;
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio Section
