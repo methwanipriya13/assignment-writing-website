@@ -1068,7 +1068,20 @@ section,
   background: var(--accent-color);
   border: 2px solid var(--accent-color);
 }
+/* Additional styles to center and align QR code */
+.call-to-action .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
+.call-to-action img.qr-code {
+    display: block;
+    margin: 20px auto 0 auto; /* centers QR and adds space above */
+    width: 20%; /* adjust as needed */
+    height: auto;
+}
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
