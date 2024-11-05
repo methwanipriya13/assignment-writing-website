@@ -1,6 +1,6 @@
 <?php
   // Replace 'your-email@example.com' with your real receiving email address
-  $receiving_email_address = 'methwanipriya13@gmailcom';
+  $receiving_email_address = 'methwanipriya13@gmail.com';
 
   // Validate if the form is submitted and fields are filled
   if( isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message']) ) {
