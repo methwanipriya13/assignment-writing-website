@@ -1,4 +1,10 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST");
+header("Content-Type: text/plain; charset=UTF-8");
+
+// Rest of the PHP code here
+<?php
   // Replace 'your-email@example.com' with your real receiving email address
   $receiving_email_address = 'meenakshiperfectsolutions@outlook.com';
 
