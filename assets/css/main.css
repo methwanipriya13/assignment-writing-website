@@ -1757,3 +1757,7 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+.logo img {
+  max-width: none;
+  max-height: none;
+}
