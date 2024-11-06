@@ -165,7 +165,8 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 32px;
+  max-height: 80px; /* or remove this line */
+  width: auto;
   margin-right: 8px;
 }
 
@@ -1756,8 +1757,3 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
-}
-.logo img {
-  max-width: none;
-  max-height: none;
-}
